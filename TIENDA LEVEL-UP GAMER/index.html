@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Level-Up Gamer</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            <span>LEVEL-UP</span>
+            <small>GAMER</small>
+        </div>
+
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="paginas/productos.html">Productos</a>
+            <a href="paginas/">Nosotros</a>
+            <a href="paginas/blogs.html">Blogs</a>
+            <a href="paginas/">Contacto</a>
+        </nav>
+
+        <div class="nav-actions">
+
+            <a href="pages/login.html" class="login-btn">
+                Iniciar sesión
+            </a>
+
+            <a href="paginas/carrito.html" class="cart-btn">
+                🛒 <span id="contador-carrito">0</span>
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <main>
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <p class="hero-subtitle">
+                    TU MUNDO GAMER COMIENZA AQUÍ
+                </p>
+
+                <h1>
+                    LEVEL-UP<br>
+                    <span>GAMER</span>
+                </h1>
+
+                <p>
+                    Encuentra consolas, accesorios, computadores,
+                    sillas y todo lo que necesitas para llevar
+                    tu experiencia gamer al siguiente nivel.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="pages/productos.html" class="btn-primary">
+                        VER PRODUCTOS
+                    </a>
+
+                    <a href="pages/registro.html" class="btn-secondary">
+                        REGÍSTRATE
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CATEGORÍAS ================= -->
+
+        <section class="categories">
+
+            <div class="section-title">
+
+                <p>CATEGORÍAS</p>
+
+                <h2>
+                    ENCUENTRA TU
+                    <span>SETUP IDEAL</span>
+                </h2>
+
+            </div>
+
+
+            <div class="category-grid">
+
+                <a href="paginas/productos.html" class="category-card">
+                    <div class="category-icon">🎮</div>
+                    <h3>CONSOLAS</h3>
+                    <p>Las mejores consolas para disfrutar tus juegos.</p>
+                </a>
+
+
+                <a href="pages/productos.html" class="category-card">
+                    <div class="category-icon">🖥️</div>
+                    <h3>PC GAMER</h3>
+                    <p>Potencia para los gamers más exigentes.</p>
+                </a>
+
+
+                <a href="paginas/productos.html" class="category-card">
+                    <div class="category-icon">🖱️</div>
+                    <h3>ACCESORIOS</h3>
+                    <p>Mejora tu experiencia con los mejores accesorios.</p>
+                </a>
+
+
+                <a href="paginas/productos.html" class="category-card">
+                    <div class="category-icon">🪑</div>
+                    <h3>SILLAS GAMER</h3>
+                    <p>Comodidad para largas sesiones de juego.</p>
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= PRODUCTOS ================= -->
+
+        <section class="products-section">
+
+            <div class="section-title">
+
+                <p>DESTACADOS</p>
+
+                <h2>
+                    PRODUCTOS
+                    <span>GAMER</span>
+                </h2>
+
+            </div>
+
+
+            <div class="products-grid">
+
+                <!-- Producto 1 -->
+
+                <article class="product-card">
+
+                    <div class="product-image">
+                        🎮
+                    </div>
+
+                    <div class="product-info">
+
+                        <span class="product-category">
+                            CONSOLAS
+                        </span>
+
+                        <h3>
+                            PlayStation 5
+                        </h3>
+
+                        <p class="price">
+                            $549.990
+                        </p>
+
+                        <button
+                            class="add-cart"
+                            onclick="agregarAlCarrito('CO001', 'PlayStation 5', 549990)"
+                        >
+                            AGREGAR AL CARRITO
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Producto 2 -->
+
+                <article class="product-card">
+
+                    <div class="product-image">
+                        🖱️
+                    </div>
+
+                    <div class="product-info">
+
+                        <span class="product-category">
+                            MOUSE
+                        </span>
+
+                        <h3>
+                            Logitech G502 HERO
+                        </h3>
+
+                        <p class="price">
+                            $49.990
+                        </p>
+
+                        <button
+                            class="add-cart"
+                            onclick="agregarAlCarrito('MS001', 'Mouse Gamer Logitech G502 HERO', 49990)"
+                        >
+                            AGREGAR AL CARRITO
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Producto 3 -->
+
+                <article class="product-card">
+
+                    <div class="product-image">
+                        🎧
+                    </div>
+
+                    <div class="product-info">
+
+                        <span class="product-category">
+                            ACCESORIOS
+                        </span>
+
+                        <h3>
+                            HyperX Cloud II
+                        </h3>
+
+                        <p class="price">
+                            $79.990
+                        </p>
+
+                        <button
+                            class="add-cart"
+                            onclick="agregarAlCarrito('AC002', 'Auriculares Gamer HyperX Cloud II', 79990)"
+                        >
+                            AGREGAR AL CARRITO
+                        </button>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <div class="view-products">
+
+                <a href="pages/productos.html" class="btn-primary">
+                    VER TODOS LOS PRODUCTOS
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <div class="footer-logo">
+
+                <h2>LEVEL-UP</h2>
+
+                <p>
+                    Tu tienda gamer en Chile.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3>NAVEGACIÓN</h3>
+
+                <a href="index.html">Inicio</a>
+                <a href="paginas/productos.html">Productos</a>
+                <a href="pages/nosotros.html">Nosotros</a>
+                <a href="pages/blogs.html">Blogs</a>
+                <a href="pages/contacto.html">Contacto</a>
+
+            </div>
+
+
+            <div>
+
+                <h3>COMUNIDAD</h3>
+
+                <p>
+                    Únete a la comunidad Level-Up Gamer.
+                </p>
+
+                <p>
+                    🎮 Explora · Juega · Gana
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Level-Up Gamer — Todos los derechos reservados.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="js/carrito.js"></script>
+
+</body>
+</html>
