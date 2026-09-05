@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Contacto | Level-Up Gamer</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+</head>
+
+<body>
+
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <header class="navbar">
+
+        <a
+            href="../index.html"
+            class="logo"
+        >
+            <span>LEVEL-UP</span>
+            <small>GAMER</small>
+        </a>
+
+
+        <nav>
+
+            <a href="../index.html">
+                Inicio
+            </a>
+
+            <a href="productos.html">
+                Productos
+            </a>
+
+            <a href="nosotros.html">
+                Nosotros
+            </a>
+
+            <a href="blogs.html">
+                Blogs
+            </a>
+
+            <a href="contacto.html">
+                Contacto
+            </a>
+
+        </nav>
+
+
+        <div class="nav-actions">
+
+            <a
+                href="login.html"
+                class="login-btn"
+            >
+                Iniciar sesión
+            </a>
+
+            <a
+                href="carrito.html"
+                class="cart-btn"
+            >
+                🛒
+                <span id="contador-carrito">
+                    0
+                </span>
+            </a>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================
+         CONTACTO
+    ========================== -->
+
+    <main>
+
+        <section class="contact-section">
+
+            <div class="section-title">
+
+                <p>
+                    ESTAMOS PARA AYUDARTE
+                </p>
+
+                <h2>
+                    CONTÁCTANOS
+                    <span>
+                        AQUÍ
+                    </span>
+                </h2>
+
+            </div>
+
+
+            <div class="contact-grid">
+
+
+                <!-- INFORMACIÓN -->
+
+                <div class="contact-info">
+
+                    <h3>
+                        Hablemos
+                    </h3>
+
+                    <p>
+                        ¿Tienes alguna duda sobre nuestros productos,
+                        tu compra o nuestra tienda?
+                    </p>
+
+                    <p>
+                        Completa el formulario y nuestro equipo
+                        recibirá tu mensaje.
+                    </p>
+
+
+                    <div class="contact-info-item">
+
+                        <span>
+                            🎮
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Level-Up Gamer
+                            </strong>
+
+                            <p>
+                                Tu tienda gamer online.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="contact-info-item">
+
+                        <span>
+                            📍
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Chile
+                            </strong>
+
+                            <p>
+                                Atención online.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="contact-info-item">
+
+                        <span>
+                            🕹️
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Soporte
+                            </strong>
+
+                            <p>
+                                Consultas sobre productos y compras.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- FORMULARIO -->
+
+                <div class="contact-form-box">
+
+                    <h3>
+                        Envíanos un mensaje
+                    </h3>
+
+
+                    <form
+                        id="form-contacto"
+                        novalidate
+                    >
+
+
+                        <div class="input-group">
+
+                            <label for="contacto-nombre">
+                                Nombre *
+                            </label>
+
+                            <input
+                                type="text"
+                                id="contacto-nombre"
+                                name="nombre"
+                                maxlength="100"
+                                placeholder="Ingresa tu nombre"
+                            >
+
+                            <small
+                                id="error-nombre"
+                                class="field-message"
+                            ></small>
+
+                        </div>
+
+
+
+                        <div class="input-group">
+
+                            <label for="contacto-correo">
+                                Correo
+                            </label>
+
+                            <input
+                                type="email"
+                                id="contacto-correo"
+                                name="correo"
+                                maxlength="100"
+                                placeholder="ejemplo@gmail.com"
+                            >
+
+                            <small
+                                id="error-correo"
+                                class="field-message"
+                            ></small>
+
+                        </div>
+
+
+
+                        <div class="input-group">
+
+                            <label for="contacto-comentario">
+                                Comentario *
+                            </label>
+
+                            <textarea
+                                id="contacto-comentario"
+                                name="comentario"
+                                maxlength="500"
+                                placeholder="Escribe tu mensaje..."
+                            ></textarea>
+
+
+                            <div class="comment-counter">
+
+                                <span id="contador-comentario">
+                                    0
+                                </span>
+
+                                / 500 caracteres
+
+                            </div>
+
+
+                            <small
+                                id="error-comentario"
+                                class="field-message"
+                            ></small>
+
+                        </div>
+
+
+                        <p
+                            id="mensaje-contacto"
+                            class="form-message"
+                        ></p>
+
+
+                        <button
+                            type="submit"
+                            class="btn-primary contact-submit"
+                        >
+                            Enviar mensaje
+                        </button>
+
+
+                    </form>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <div class="footer-logo">
+
+                <h2>
+                    LEVEL-UP GAMER
+                </h2>
+
+                <p>
+                    Todo lo que necesitas para llevar
+                    tu experiencia gamer al siguiente nivel.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    NAVEGACIÓN
+                </h3>
+
+                <a href="../index.html">
+                    Inicio
+                </a>
+
+                <a href="productos.html">
+                    Productos
+                </a>
+
+                <a href="nosotros.html">
+                    Nosotros
+                </a>
+
+                <a href="contacto.html">
+                    Contacto
+                </a>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    CUENTA
+                </h3>
+
+                <a href="login.html">
+                    Iniciar sesión
+                </a>
+
+                <a href="registro.html">
+                    Registrarse
+                </a>
+
+                <a href="carrito.html">
+                    Carrito
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            © 2026 Level-Up Gamer.
+            Todos los derechos reservados.
+
+        </div>
+
+    </footer>
+
+
+    <script src="../js/contacto.js"></script>
+    <script src="../js/carrito.js"></script>
+
+</body>
+
+</html>

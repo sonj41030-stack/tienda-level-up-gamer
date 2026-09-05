@@ -31,17 +31,12 @@ a {
 .navbar {
     width: 100%;
     min-height: 75px;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     padding: 15px 6%;
-
     background: #050505;
-
     border-bottom: 1px solid #1E90FF;
-
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -53,9 +48,7 @@ a {
 .logo {
     display: flex;
     flex-direction: column;
-
     font-family: 'Orbitron', sans-serif;
-
     line-height: 1;
 }
 
@@ -82,7 +75,6 @@ a {
 .navbar nav a {
     font-size: 14px;
     font-weight: 500;
-
     transition: 0.3s;
 }
 
@@ -101,11 +93,8 @@ a {
 
 .login-btn {
     border: 1px solid #1E90FF;
-
     padding: 10px 16px;
-
     color: #1E90FF;
-
     transition: 0.3s;
 }
 
@@ -130,12 +119,9 @@ a {
 
 .hero {
     min-height: 600px;
-
     display: flex;
     align-items: center;
-
     padding: 80px 8%;
-
     background:
         radial-gradient(
             circle at 80% 50%,
@@ -150,23 +136,16 @@ a {
 
 .hero-subtitle {
     color: #39FF14;
-
     font-family: 'Orbitron', sans-serif;
-
     font-size: 14px;
-
     letter-spacing: 3px;
-
     margin-bottom: 20px;
 }
 
 .hero h1 {
     font-family: 'Orbitron', sans-serif;
-
     font-size: clamp(50px, 8vw, 100px);
-
     line-height: 0.95;
-
     margin-bottom: 25px;
 }
 
@@ -176,11 +155,8 @@ a {
 
 .hero-content > p:not(.hero-subtitle) {
     color: #D3D3D3;
-
     max-width: 550px;
-
     line-height: 1.7;
-
     margin-bottom: 35px;
 }
 
@@ -197,13 +173,9 @@ a {
 .btn-primary,
 .btn-secondary {
     display: inline-block;
-
     padding: 14px 25px;
-
     font-family: 'Orbitron', sans-serif;
-
     font-size: 12px;
-
     transition: 0.3s;
 }
 
@@ -234,25 +206,19 @@ a {
 
 .section-title {
     text-align: center;
-
     margin-bottom: 50px;
 }
 
 .section-title p {
     color: #39FF14;
-
     font-family: 'Orbitron', sans-serif;
-
     font-size: 12px;
-
     letter-spacing: 3px;
-
     margin-bottom: 10px;
 }
 
 .section-title h2 {
     font-family: 'Orbitron', sans-serif;
-
     font-size: 35px;
 }
 
@@ -267,36 +233,26 @@ a {
 
 .categories {
     padding: 90px 8%;
-
     background: #050505;
 }
 
 .category-grid {
     display: grid;
-
-    grid-template-columns:
-        repeat(4, 1fr);
-
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
 }
 
 .category-card {
     padding: 35px 20px;
-
     text-align: center;
-
     background: #0d0d0d;
-
     border: 1px solid #222;
-
     transition: 0.3s;
 }
 
 .category-card:hover {
     transform: translateY(-8px);
-
     border-color: #1E90FF;
-
     box-shadow:
         0 0 25px
         rgba(30, 144, 255, 0.25);
@@ -304,23 +260,18 @@ a {
 
 .category-icon {
     font-size: 45px;
-
     margin-bottom: 20px;
 }
 
 .category-card h3 {
     font-family: 'Orbitron', sans-serif;
-
     font-size: 15px;
-
     margin-bottom: 12px;
 }
 
 .category-card p {
     color: #D3D3D3;
-
     font-size: 14px;
-
     line-height: 1.5;
 }
 
@@ -335,39 +286,28 @@ a {
 
 .products-grid {
     display: grid;
-
-    grid-template-columns:
-        repeat(3, 1fr);
-
+    grid-template-columns: repeat(3, 1fr);
     gap: 25px;
 }
 
 .product-card {
     background: #0b0b0b;
-
     border: 1px solid #222;
-
     overflow: hidden;
-
     transition: 0.3s;
 }
 
 .product-card:hover {
     transform: translateY(-5px);
-
     border-color: #39FF14;
 }
 
 .product-image {
     height: 220px;
-
     display: flex;
-
     align-items: center;
     justify-content: center;
-
     font-size: 80px;
-
     background:
         radial-gradient(
             circle,
@@ -382,41 +322,29 @@ a {
 
 .product-category {
     color: #39FF14;
-
     font-size: 11px;
-
     letter-spacing: 2px;
 }
 
 .product-info h3 {
     font-family: 'Orbitron', sans-serif;
-
     margin: 10px 0;
 }
 
 .price {
     color: #1E90FF;
-
     font-size: 22px;
-
     font-weight: 700;
-
     margin-bottom: 20px;
 }
 
 .add-cart {
     width: 100%;
-
     padding: 12px;
-
     border: 1px solid #1E90FF;
-
     background: transparent;
-
     color: #ffffff;
-
     cursor: pointer;
-
     transition: 0.3s;
 }
 
@@ -431,7 +359,6 @@ a {
 
 .view-products {
     text-align: center;
-
     margin-top: 50px;
 }
 
@@ -442,67 +369,159 @@ a {
 
 footer {
     background: #050505;
-
     border-top: 1px solid #222;
-
     padding-top: 60px;
 }
 
 .footer-content {
     padding: 0 8% 50px;
-
     display: grid;
-
-    grid-template-columns:
-        2fr 1fr 1fr;
-
+    grid-template-columns: 2fr 1fr 1fr;
     gap: 50px;
 }
 
 .footer-logo h2 {
     font-family: 'Orbitron', sans-serif;
-
     color: #1E90FF;
 }
 
 .footer-content h3 {
     font-family: 'Orbitron', sans-serif;
-
     font-size: 13px;
-
     margin-bottom: 20px;
-
     color: #39FF14;
 }
 
 .footer-content a {
     display: block;
-
     color: #D3D3D3;
-
     margin-bottom: 10px;
-
     font-size: 14px;
 }
 
 .footer-content p {
     color: #D3D3D3;
-
     line-height: 1.6;
-
     font-size: 14px;
 }
 
 .footer-bottom {
     border-top: 1px solid #222;
-
     padding: 20px 8%;
-
     text-align: center;
-
     color: #777;
-
     font-size: 12px;
+}
+
+
+/* =========================
+   LOGIN
+========================= */
+
+.login-section {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 6%;
+    background:
+        radial-gradient(
+            circle at 50% 30%,
+            rgba(30, 144, 255, 0.15),
+            transparent 60%
+        );
+}
+
+.login-box {
+    width: 100%;
+    max-width: 400px;
+    background: #0b0b0b;
+    border: 1px solid #222;
+    padding: 40px 35px;
+}
+
+.login-box h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 26px;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.login-box h2 span {
+    color: #1E90FF;
+}
+
+.login-subtitle {
+    text-align: center;
+    color: #D3D3D3;
+    font-size: 13px;
+    margin-bottom: 30px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #39FF14;
+    margin-bottom: 8px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 14px;
+    background: #000000;
+    border: 1px solid #333;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #1E90FF;
+}
+
+.login-box .btn-primary {
+    width: 100%;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+.form-message {
+    margin-top: 18px;
+    padding: 10px 14px;
+    font-size: 13px;
+    text-align: center;
+    display: none;
+}
+
+.form-message.error {
+    display: block;
+    border: 1px solid #FF3B3B;
+    color: #FF3B3B;
+    background: rgba(255, 59, 59, 0.08);
+}
+
+.form-message.success {
+    display: block;
+    border: 1px solid #39FF14;
+    color: #39FF14;
+    background: rgba(57, 255, 20, 0.08);
+}
+
+.login-hint {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 11px;
+    color: #555;
 }
 
 
@@ -517,13 +536,11 @@ footer {
     }
 
     .category-grid {
-        grid-template-columns:
-            repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .products-grid {
-        grid-template-columns:
-            repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .footer-content {
@@ -553,6 +570,349 @@ footer {
 
     .navbar {
         padding: 15px 5%;
+    }
+
+    .login-section {
+        padding: 40px 5%;
+    }
+
+    .login-box {
+        padding: 30px 20px;
+    }
+}
+
+/* ==========================================
+   NOSOTROS
+========================================== */
+
+.about-hero {
+    min-height: 460px;
+    display: flex;
+    align-items: center;
+    padding: 80px 8%;
+    background:
+        radial-gradient(
+            circle at 75% 40%,
+            rgba(30, 144, 255, 0.22),
+            transparent 45%
+        );
+}
+
+.about-hero-content {
+    max-width: 780px;
+}
+
+.about-hero h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(38px, 6vw, 70px);
+    line-height: 1.05;
+    margin-bottom: 25px;
+}
+
+.about-hero h1 span {
+    color: #1E90FF;
+}
+
+.about-hero-content > p:last-child {
+    color: #D3D3D3;
+    line-height: 1.8;
+    max-width: 680px;
+}
+
+
+.about-section,
+.values-section,
+.developers-section {
+    padding: 90px 8%;
+}
+
+.values-section {
+    background: #050505;
+}
+
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.about-card {
+    background: #0b0b0b;
+    border: 1px solid #222;
+    padding: 35px;
+    transition: 0.3s;
+}
+
+.about-card:hover {
+    border-color: #1E90FF;
+    transform: translateY(-5px);
+}
+
+.about-icon {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.about-card h3 {
+    color: #39FF14;
+    font-family: 'Orbitron', sans-serif;
+    margin-bottom: 18px;
+}
+
+.about-card p {
+    color: #D3D3D3;
+    line-height: 1.7;
+    margin-bottom: 12px;
+}
+
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.value-card {
+    background: #0b0b0b;
+    border: 1px solid #222;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.value-card span {
+    display: block;
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.value-card h3 {
+    font-family: 'Orbitron', sans-serif;
+    color: #1E90FF;
+    margin-bottom: 12px;
+}
+
+.value-card p {
+    color: #D3D3D3;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+
+.developers-grid {
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(260px, 320px));
+    justify-content: center;
+    gap: 25px;
+}
+
+.developer-card {
+    background: #0b0b0b;
+    border: 1px solid #222;
+    padding: 35px;
+    text-align: center;
+}
+
+.developer-avatar {
+    font-size: 65px;
+    margin-bottom: 20px;
+}
+
+.developer-card h3 {
+    font-family: 'Orbitron', sans-serif;
+    color: #ffffff;
+}
+
+.developer-card > span {
+    display: block;
+    color: #39FF14;
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin: 10px 0 18px;
+}
+
+.developer-card p {
+    color: #D3D3D3;
+    line-height: 1.6;
+}
+
+
+/* ==========================================
+   CONTACTO
+========================================== */
+
+.contact-section {
+    min-height: 75vh;
+    padding: 90px 8%;
+    background:
+        radial-gradient(
+            circle at 15% 35%,
+            rgba(57, 255, 20, 0.08),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 85% 40%,
+            rgba(30, 144, 255, 0.14),
+            transparent 40%
+        );
+}
+
+
+.contact-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1.25fr;
+    gap: 35px;
+}
+
+
+.contact-info,
+.contact-form-box {
+    background: #0b0b0b;
+    border: 1px solid #222;
+    padding: 40px;
+}
+
+
+.contact-info h3,
+.contact-form-box h3 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+
+.contact-info > p {
+    color: #D3D3D3;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+
+.contact-info-item {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+    border-top: 1px solid #222;
+    padding-top: 20px;
+    margin-top: 20px;
+}
+
+
+.contact-info-item > span {
+    font-size: 28px;
+}
+
+
+.contact-info-item strong {
+    color: #39FF14;
+}
+
+
+.contact-info-item p {
+    color: #999;
+    margin-top: 5px;
+    font-size: 13px;
+}
+
+
+.contact-form-box textarea {
+    width: 100%;
+    min-height: 170px;
+    padding: 12px 14px;
+    background: #000000;
+    border: 1px solid #333;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    resize: vertical;
+    transition: 0.3s;
+}
+
+
+.contact-form-box textarea:focus {
+    outline: none;
+    border-color: #1E90FF;
+}
+
+
+.field-message {
+    display: block;
+    min-height: 18px;
+    margin-top: 7px;
+    font-size: 12px;
+}
+
+
+.field-message.error {
+    color: #FF3B3B;
+}
+
+
+.field-message.success {
+    color: #39FF14;
+}
+
+
+.comment-counter {
+    text-align: right;
+    color: #777;
+    font-size: 11px;
+    margin-top: 6px;
+}
+
+
+.contact-submit {
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+
+/* ==========================================
+   RESPONSIVE NOSOTROS / CONTACTO
+========================================== */
+
+@media (max-width: 900px) {
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .values-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .about-hero {
+        padding: 60px 6%;
+    }
+
+    .about-section,
+    .values-section,
+    .developers-section,
+    .contact-section {
+        padding: 60px 6%;
+    }
+
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-info,
+    .contact-form-box {
+        padding: 25px 20px;
     }
 
 }
