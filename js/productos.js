@@ -1,3 +1,10 @@
+// ==========================================
+// productos.js - Modulo de listado y filtrado de productos
+// Renderiza el catalogo y gestiona la logica de productos
+// Autor: Edixon Jhonaiker
+// ==========================================
+
+
 document.addEventListener("DOMContentLoaded", function () {
 
     const parametros = new URLSearchParams(window.location.search);
