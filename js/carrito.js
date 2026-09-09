@@ -1,3 +1,9 @@
+// ==========================================
+// carrito.js - Modulo de carrito de compras
+// Gestiona agregar/eliminar productos, calcular totales y guardar en localStorage
+// Autor: Edixon Jhonaiker
+// ==========================================
+
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
 // AGREGAR PRODUCTO
