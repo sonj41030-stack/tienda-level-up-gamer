@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Level-Up Gamer | Registro de Usuario</title>
+
+    <link rel="icon" type="image/png" href="../images/favicon.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h1>LEVEL-UP <span>GAMER</span></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="blogs.html">Blogs</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="user-actions">
+            <a href="login.html">Iniciar sesión</a> |
+            <a href="registro.html" class="active">Registrar usuario</a>
+            <a href="carrito.html" class="cart-btn" id="cart-counter">🛒 Cart (0)</a>
+        </div>
+    </header>
+
+    <main class="form-container">
+        <h2>Registro de Usuario</h2>
+        <form id="registroForm" novalidate>
+
+            <div class="form-group">
+                <label for="run">RUN (Sin puntos ni guion):</label>
+                <input type="text" id="run" name="run" autocomplete="off" placeholder="Ej: 19011022K">
+                <small class="error-msg" id="errorRun"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" autocomplete="given-name">
+                <small class="error-msg" id="errorNombre"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="apellidos">Apellidos:</label>
+                <input type="text" id="apellidos" name="apellidos" autocomplete="family-name">
+                <small class="error-msg" id="errorApellidos"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="correo">Correo Electrónico:</label>
+                <input type="email" id="correo" name="correo" autocomplete="email" placeholder="Ej: usuario@duoc.cl">
+                <small class="error-msg" id="errorCorreo"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Contraseña (4 a 10 caracteres):</label>
+                <input type="password" id="password" name="password" autocomplete="new-password">
+                <small class="error-msg" id="errorPassword"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+                <input type="date" id="fechaNacimiento" name="fechaNacimiento">
+                <small class="error-msg" id="errorFecha"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="region">Región:</label>
+                <select id="region" name="region">
+                    <option value="">Seleccione una región</option>
+                </select>
+                <small class="error-msg" id="errorRegion"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="comuna">Comuna:</label>
+                <select id="comuna" name="comuna" disabled>
+                    <option value="">Primero seleccione una región</option>
+                </select>
+                <small class="error-msg" id="errorComuna"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="direccion">Dirección:</label>
+                <input type="text" id="direccion" name="direccion" autocomplete="street-address">
+                <small class="error-msg" id="errorDireccion"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="codigo-referido">Código de Referido (Opcional):</label>
+                <input type="text" id="codigo-referido" name="codigo-referido" placeholder="Ej: LUG-9821" style="text-transform: uppercase;">
+            </div>
+
+            <button type="submit" class="btn-primary btn-block">Registrarse</button>
+        </form>
+    </main>
+
+    <footer>
+        <div id="indicadores-container" style="margin-bottom: 10px; font-size: 0.9rem; color: var(--accent-green);">
+            Obteniendo valores del mercado...
+        </div>
+        <p>© 2026 Level-Up Gamer. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="../js/api.js"></script>
+    <script src="../js/carrito.js"></script>
+    <script src="../js/levelUpSystem.js"></script>
+    <script src="../js/registro.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Level-Up Gamer | Contacto</title>
+    
+    <link rel="icon" type="image/png" href="../images/favicon.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h1>LEVEL-UP <span>GAMER</span></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="blogs.html">Blogs</a></li>
+                <li><a href="contacto.html" class="active">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="user-actions">
+            <a href="login.html">Iniciar sesión</a> | 
+            <a href="registro.html">Registrar usuario</a>
+            <a href="carrito.html" class="cart-btn" id="cart-counter">🛒 Cart (0)</a>
+        </div>
+    </header>
+
+    <main class="contact-page">
+        <div class="contact-info">
+            <h2>Ponte en <span>Contacto</span></h2>
+            <p>¿Tienes dudas sobre un pedido, buscas un juego específico o necesitas soporte técnico? ¡Escríbenos y nuestro equipo te responderá a la brevedad!</p>
+            
+            <ul class="info-list">
+                <li><strong>📍 Dirección:</strong> Av. Los Gamers 1234, Santiago, Chile.</li>
+                <li><strong>📞 Teléfono:</strong> +56 9 1234 5678</li>
+                <li><strong>✉️ Correo:</strong> soporte@levelupgamer.cl</li>
+                <li><strong>🕒 Horario:</strong> Lunes a Viernes, 09:00 - 18:00 hrs.</li>
+            </ul>
+        </div>
+
+        <div class="form-container contact-form-box">
+            <form id="contactoForm" novalidate>
+                <div class="form-group">
+                    <label for="nombreContacto">Nombre completo:</label>
+                    <input type="text" id="nombreContacto" placeholder="Ej: Gordon Freeman">
+                    <small class="error-msg" id="errorNombreContacto"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="correoContacto">Correo Electrónico:</label>
+                    <input type="email" id="correoContacto" placeholder="tucorreo@ejemplo.com">
+                    <small class="error-msg" id="errorCorreoContacto"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="asuntoContacto">Asunto:</label>
+                    <input type="text" id="asuntoContacto" placeholder="Ej: Consulta sobre stock">
+                    <small class="error-msg" id="errorAsuntoContacto"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="mensajeContacto">Mensaje:</label>
+                    <textarea id="mensajeContacto" rows="5" placeholder="Escribe tu mensaje aquí..." style="padding: 12px; background-color: #222; border: 1px solid #444; color: white; border-radius: 4px; font-family: var(--font-text); resize: vertical;"></textarea>
+                    <small class="error-msg" id="errorMensajeContacto"></small>
+                </div>
+
+                <button type="submit" class="btn-primary btn-block">Enviar Mensaje</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div id="indicadores-container" style="margin-bottom: 10px; font-size: 0.9rem; color: var(--accent-green);">
+            Obteniendo valores del mercado...
+        </div>
+        <p>© 2026 Level-Up Gamer. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="../js/api.js"></script>
+    <script src="../js/contacto.js"></script>
+    <script src="../js/carrito.js"></script>
+</body>
+</html>

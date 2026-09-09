@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Level-Up Gamer | Panel Admin</title>
+    
+    <link rel="icon" type="image/png" href="../images/favicon.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+    <header style="border-bottom: 2px solid var(--accent-green);">
+        <div class="logo">
+            <h1>PANEL <span>ADMIN</span></h1>
+        </div>
+        <div class="user-actions">
+            <a href="../index.html">Cerrar sesión</a>
+        </div>
+    </header>
+
+    <main class="admin-container">
+        <aside class="sidebar">
+            <ul id="admin-menu">
+                <li><a href="#" data-target="dashboard">📊 Dashboard</a></li>
+                <li><a href="#" data-target="inventario">📦 Inventario</a></li>
+                <li><a href="#" data-target="ordenes">🛒 Órdenes</a></li>
+                <li><a href="#" data-target="usuarios">👥 Usuarios</a></li>
+                <li><a href="#" data-target="mensajes">✉️ Mensajes de Contacto</a></li>
+            </ul>
+        </aside>
+        
+        <div class="dashboard-content">
+            
+            <section id="dashboard" class="admin-section">
+                <h2>Bienvenido, Administrador</h2>
+                <div style="margin-top: 30px; background: #111; padding: 20px; border: 1px solid #333; border-radius: 8px;">
+                    <h3 style="color: var(--accent-green); font-family: 'Orbitron', sans-serif;">Estadísticas Rápidas</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 20px;">
+                        <div style="background: #181818; padding: 15px; border-radius: 6px; border: 1px solid #222;">
+                            <span style="color: var(--text-secondary); font-size: 0.9rem;">Usuarios Registrados</span>
+                            <p id="stat-usuarios-count" style="font-size: 1.8rem; color: #00ffcc; font-family: 'Orbitron', sans-serif; margin-top: 5px;">0</p>
+                        </div>
+                        <div style="background: #181818; padding: 15px; border-radius: 6px; border: 1px solid #222;">
+                            <span style="color: var(--text-secondary); font-size: 0.9rem;">Órdenes Realizadas</span>
+                            <p id="stat-ordenes-count" style="font-size: 1.8rem; color: #00ffcc; font-family: 'Orbitron', sans-serif; margin-top: 5px;">0</p>
+                        </div>
+                        <div style="background: #181818; padding: 15px; border-radius: 6px; border: 1px solid #222;">
+                            <span style="color: var(--text-secondary); font-size: 0.9rem;">Mensajes Sin Leer</span>
+                            <p id="stat-mensajes-count" style="font-size: 1.8rem; color: #00ffcc; font-family: 'Orbitron', sans-serif; margin-top: 5px;">0</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="inventario" class="admin-section" style="display: none;">
+                <h2>Gestión de <span>Inventario</span></h2>
+                <p style="color: var(--text-secondary); margin-bottom: 20px;">Agrega nuevos artículos al catálogo de la tienda.</p>
+                
+                <div class="form-container" style="max-width: 600px; margin: 0; background-color: #111; border: 1px solid #333; padding: 30px; border-radius: 8px;">
+                    <form id="formInventario">
+                        <div class="form-group">
+                            <label for="nombreProd">Nombre del Producto:</label>
+                            <input type="text" id="nombreProd" required placeholder="Ej: Audífonos Gamer 7.1">
+                        </div>
+                        
+                        <div style="display: flex; gap: 20px;">
+                            <div class="form-group" style="flex: 1;">
+                                <label for="precioProd">Precio (CLP):</label>
+                                <input type="number" id="precioProd" required placeholder="Ej: 45000">
+                            </div>
+                            <div class="form-group" style="flex: 1;">
+                                <label for="stockProd">Stock Inicial:</label>
+                                <input type="number" id="stockProd" required placeholder="Ej: 15">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="catProd">Categoría:</label>
+                            <select id="catProd" style="width: 100%; padding: 12px; background-color: #222; color: #fff; border: 1px solid #444; border-radius: 4px; font-family: var(--font-text);">
+                                <option value="perifericos">Periféricos</option>
+                                <option value="hardware">Hardware y Componentes</option>
+                                <option value="juegos_mesa">Juegos de Mesa</option>
+                                <option value="accesorios">Accesorios</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="btn-primary" style="margin-top: 10px;">Guardar Producto</button>
+                    </form>
+                </div>
+            </section>
+
+            <section id="ordenes" class="admin-section" style="display: none;">
+                <h2>Gestión de <span>Órdenes</span></h2>
+                <p style="color: var(--text-secondary); margin-bottom: 20px;">Revisa las compras realizadas por los clientes.</p>
+                <div style="overflow-x: auto; background: #111; border: 1px solid #333; border-radius: 8px; padding: 20px;">
+                    <table style="width: 100%; border-collapse: collapse; color: #fff; text-align: left;">
+                        <thead>
+                            <tr style="border-bottom: 2px solid var(--accent-green);">
+                                <th style="padding: 12px;">ID Órden</th>
+                                <th style="padding: 12px;">Cliente</th>
+                                <th style="padding: 12px;">Total</th>
+                                <th style="padding: 12px;">Estado</th>
+                                <th style="padding: 12px;">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tabla-ordenes-body"></tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section id="usuarios" class="admin-section" style="display: none;">
+                <h2>Usuarios <span>Registrados</span></h2>
+                <p style="color: var(--text-secondary); margin-bottom: 20px;">Listado de clientes y puntos acumulados del programa LevelUp.</p>
+                <div style="overflow-x: auto; background: #111; border: 1px solid #333; border-radius: 8px; padding: 20px;">
+                    <table style="width: 100%; border-collapse: collapse; color: #fff; text-align: left;">
+                        <thead>
+                            <tr style="border-bottom: 2px solid var(--accent-green);">
+                                <th style="padding: 12px;">Nombre</th>
+                                <th style="padding: 12px;">Email</th>
+                                <th style="padding: 12px;">Puntos LevelUp</th>
+                                <th style="padding: 12px;">Nivel</th>
+                                <th style="padding: 12px;">Código Ref.</th>
+                                <th style="padding: 12px;">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tabla-usuarios-body"></tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section id="mensajes" class="admin-section" style="display: none;">
+                <h2>Mensajes de <span>Contacto</span></h2>
+                <p style="color: var(--text-secondary); margin-bottom: 20px;">Consultas enviadas desde el formulario de contacto.</p>
+                <div style="overflow-x: auto; background: #111; border: 1px solid #333; border-radius: 8px; padding: 20px;">
+                    <table style="width: 100%; border-collapse: collapse; color: #fff; text-align: left;">
+                        <thead>
+                            <tr style="border-bottom: 2px solid var(--accent-green);">
+                                <th style="padding: 12px;">Fecha</th>
+                                <th style="padding: 12px;">Nombre</th>
+                                <th style="padding: 12px;">Email</th>
+                                <th style="padding: 12px;">Mensaje</th>
+                                <th style="padding: 12px;">Estado</th>
+                                <th style="padding: 12px;">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tabla-mensajes-body"></tbody>
+                    </table>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer>
+        <div id="indicadores-container" style="margin-bottom: 10px; font-size: 0.9rem; color: var(--accent-green);">
+            Obteniendo valores del mercado...
+        </div>
+        <p>© 2026 Level-Up Gamer. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="../js/admin.js"></script>
+    <script src="../js/api.js"></script>
+</body>
+</html>
