@@ -30,7 +30,7 @@ function initAdminNavigation() {
         });
     });
 }
-
+/*este bloque agrega correos, ordenes o mensajes en caso de que no hayan para que el admin vea como funciona la pagina
 function initMockData() {
     if (!localStorage.getItem('lug_users')) {
         const mockUsers = [
