@@ -1,423 +1,80 @@
-document.addEventListener("DOMContentLoaded", function () {
+const formLogin = document.getElementById('loginForm');
 
-    const formulario = document.getElementById("form-login");
-    const correoInput = document.getElementById("correo");
-    const claveInput = document.getElementById("clave");
-    const mensaje = document.getElementById("mensaje-login");
-
-
-    /*
-    ==================================================
-    MOSTRAR MENSAJE
-    ==================================================
-    */
-
-    function mostrarMensaje(texto, tipo) {
-
-        mensaje.textContent = texto;
-
-        mensaje.className = "form-message " + tipo;
+function mostrarError(idInput, idError, mensaje) {
+    const input = document.getElementById(idInput);
+    if (input) {
+        input.classList.remove('input-success');
+        input.classList.add('input-error');
     }
+    const errElem = document.getElementById(idError);
+    if (errElem) errElem.textContent = mensaje;
+}
 
-
-    /*
-    ==================================================
-    VALIDAR CORREO
-    ==================================================
-    */
-
-    function validarCorreo(correo) {
-
-        return (
-            correo.endsWith("@duoc.cl") ||
-            correo.endsWith("@profesor.duoc.cl") ||
-            correo.endsWith("@gmail.com")
-        );
+function mostrarExito(idInput, idError) {
+    const input = document.getElementById(idInput);
+    if (input) {
+        input.classList.remove('input-error');
+        input.classList.add('input-success');
     }
+    const errElem = document.getElementById(idError);
+    if (errElem) errElem.textContent = "";
+}
 
+if (formLogin) {
+    formLogin.addEventListener('submit', (e) => {
+        e.preventDefault();
+        let formValido = true;
 
-    /*
-    ==================================================
-    OBTENER USUARIOS
-    ==================================================
-    */
-
-    function obtenerUsuarios() {
-
-        let usuarios = [];
-
-        try {
-
-            usuarios =
-                JSON.parse(
-                    localStorage.getItem("usuarios")
-                ) || [];
-
-        } catch (error) {
-
-            usuarios = [];
-
+        const correoInput = document.getElementById('loginCorreo').value.trim();
+        const regexCorreo = /^[a-zA-Z0-9._-]+@(duoc\.cl|profesor\.duoc\.cl|gmail\.com)$/;
+        
+        if (!correoInput) {
+            mostrarError('loginCorreo', 'errorLoginCorreo', 'El correo es requerido.');
+            formValido = false;
+        } else if (!regexCorreo.test(correoInput)) {
+            mostrarError('loginCorreo', 'errorLoginCorreo', 'Correo no válido o no autorizado.');
+            formValido = false;
+        } else {
+            mostrarExito('loginCorreo', 'errorLoginCorreo');
         }
 
-
-        /*
-        Usuario administrador por defecto
-        */
-
-        const existeAdministrador =
-            usuarios.some(function (usuario) {
-
-                return (
-                    usuario.correo &&
-                    usuario.correo.toLowerCase() ===
-                    "admin@duoc.cl"
-                );
-
-            });
-
-
-        if (!existeAdministrador) {
-
-            usuarios.push({
-
-                id: "ADMIN001",
-
-                nombre: "Administrador",
-
-                apellido: "Level-Up",
-
-                run: "19011022K",
-
-                correo: "admin@duoc.cl",
-
-                password: "admin123",
-
-                fecha: "",
-
-                region: "Metropolitana",
-
-                comuna: "Melipilla",
-
-                direccion: "",
-
-                tipo: "Administrador"
-
-            });
-
-
-            localStorage.setItem(
-                "usuarios",
-                JSON.stringify(usuarios)
-            );
-
+        const passInput = document.getElementById('loginPassword').value.trim();
+        if (!passInput) {
+            mostrarError('loginPassword', 'errorLoginPassword', 'Debe ingresar su contraseña.');
+            formValido = false;
+        } else {
+            mostrarExito('loginPassword', 'errorLoginPassword');
         }
 
-
-        return usuarios;
-    }
-
-
-    /*
-    ==================================================
-    GUARDAR SESIÓN
-    ==================================================
-    */
-
-    function iniciarSesion(usuario) {
-
-        const usuarioActivo = {
-
-            id: usuario.id,
-
-            nombre: usuario.nombre,
-
-            apellido: usuario.apellido,
-
-            correo: usuario.correo,
-
-            tipo: usuario.tipo || "Cliente"
-
-        };
-
-
-        localStorage.setItem(
-            "usuarioActivo",
-            JSON.stringify(usuarioActivo)
-        );
-
-
-        localStorage.setItem(
-            "sesionIniciada",
-            "true"
-        );
-
-    }
-
-
-    /*
-    ==================================================
-    LOGIN
-    ==================================================
-    */
-
-    formulario.addEventListener(
-        "submit",
-        function (event) {
-
-            event.preventDefault();
-
-
-            const correo =
-                correoInput.value
-                    .trim()
-                    .toLowerCase();
-
-
-            const password =
-                claveInput.value;
-
-
-            /*
-            VALIDACIÓN CORREO
-            */
-
-            if (correo === "") {
-
-                mostrarMensaje(
-                    "El correo es obligatorio.",
-                    "error"
-                );
-
-                correoInput.focus();
-
+        if (formValido) {
+            if (correoInput === 'admin@duoc.cl' && passInput === 'admin123') {
+                localStorage.setItem('lug_current_user', JSON.stringify({
+                    nombre: 'Administrador',
+                    email: 'admin@duoc.cl',
+                    role: 'admin'
+                }));
+                alert("¡Bienvenido al Panel de Administración!");
+                window.location.href = "admin.html";
                 return;
             }
 
+            const users = JSON.parse(localStorage.getItem('lug_users')) || [];
+            const userFound = users.find(u => (u.email === correoInput || u.correo === correoInput) && u.password === passInput);
 
-            if (correo.length > 100) {
-
-                mostrarMensaje(
-                    "El correo no puede superar los 100 caracteres.",
-                    "error"
-                );
-
-                correoInput.focus();
-
-                return;
-            }
-
-
-            if (!validarCorreo(correo)) {
-
-                mostrarMensaje(
-                    "Solo se permiten correos @duoc.cl, @profesor.duoc.cl o @gmail.com.",
-                    "error"
-                );
-
-                correoInput.focus();
-
-                return;
-            }
-
-
-            /*
-            VALIDACIÓN CONTRASEÑA
-            */
-
-            if (password === "") {
-
-                mostrarMensaje(
-                    "La contraseña es obligatoria.",
-                    "error"
-                );
-
-                claveInput.focus();
-
-                return;
-            }
-
-
-            if (
-                password.length < 4 ||
-                password.length > 10
-            ) {
-
-                mostrarMensaje(
-                    "La contraseña debe tener entre 4 y 10 caracteres.",
-                    "error"
-                );
-
-                claveInput.focus();
-
-                return;
-            }
-
-
-            /*
-            BUSCAR USUARIO
-            */
-
-            const usuarios = obtenerUsuarios();
-
-
-            const usuario =
-                usuarios.find(function (item) {
-
-                    return (
-                        item.correo &&
-                        item.correo.toLowerCase() ===
-                        correo &&
-                        item.password ===
-                        password
-                    );
-
-                });
-
-
-            /*
-            USUARIO NO ENCONTRADO
-            */
-
-            if (!usuario) {
-
-                mostrarMensaje(
-                    "Correo o contraseña incorrectos.",
-                    "error"
-                );
-
-                return;
-            }
-
-
-            /*
-            SESIÓN CORRECTA
-            */
-
-            iniciarSesion(usuario);
-
-
-            mostrarMensaje(
-                "Inicio de sesión correcto.",
-                "success"
-            );
-
-
-            /*
-            REDIRECCIÓN SEGÚN ROL
-            */
-
-            setTimeout(function () {
-
-                if (
-                    usuario.tipo === "Administrador" ||
-                    usuario.tipo === "Vendedor"
-                ) {
-
-                    window.location.href =
-                        "../admin/index.html";
-
-                } else {
-
-                    window.location.href =
-                        "../index.html";
-
-                }
-
-            }, 700);
-
-        }
-    );
-
-
-    /*
-    ==================================================
-    VALIDACIÓN EN TIEMPO REAL
-    ==================================================
-    */
-
-    correoInput.addEventListener(
-        "input",
-        function () {
-
-            const correo =
-                correoInput.value
-                    .trim()
-                    .toLowerCase();
-
-
-            if (correo === "") {
-
-                mostrarMensaje(
-                    "Ingrese su correo.",
-                    "error"
-                );
-
-                return;
-            }
-
-
-            if (
-                validarCorreo(correo) &&
-                correo.length <= 100
-            ) {
-
-                mostrarMensaje(
-                    "Correo válido.",
-                    "success"
-                );
-
+            if (userFound) {
+                localStorage.setItem('lug_current_user', JSON.stringify(userFound));
+                alert(`¡Sesión iniciada con éxito! Bienvenido, ${userFound.nombre}.`);
+                window.location.href = "../index.html";
+            } else if (users.length === 0) {
+                localStorage.setItem('lug_current_user', JSON.stringify({
+                    nombre: correoInput.split('@')[0],
+                    email: correoInput
+                }));
+                alert("¡Sesión iniciada con éxito! Redirigiendo al inicio...");
+                window.location.href = "../index.html";
             } else {
-
-                mostrarMensaje(
-                    "Correo no permitido.",
-                    "error"
-                );
-
+                mostrarError('loginPassword', 'errorLoginPassword', 'Correo o contraseña incorrectos.');
             }
-
         }
-    );
-
-
-    claveInput.addEventListener(
-        "input",
-        function () {
-
-            const cantidad =
-                claveInput.value.length;
-
-
-            if (cantidad === 0) {
-
-                mensaje.textContent = "";
-
-                mensaje.className =
-                    "form-message";
-
-                return;
-            }
-
-
-            if (
-                cantidad >= 4 &&
-                cantidad <= 10
-            ) {
-
-                mostrarMensaje(
-                    "Contraseña válida.",
-                    "success"
-                );
-
-            } else {
-
-                mostrarMensaje(
-                    "La contraseña debe tener entre 4 y 10 caracteres.",
-                    "error"
-                );
-
-            }
-
-        }
-    );
-
-});
+    });
+}

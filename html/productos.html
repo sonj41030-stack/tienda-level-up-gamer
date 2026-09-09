@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Level-Up Gamer | Productos</title>
+    
+    <link rel="icon" type="image/png" href="../images/favicon.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h1>LEVEL-UP <span>GAMER</span></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="productos.html" class="active">Productos</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="blogs.html">Blogs</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="user-actions">
+            <a href="login.html">Iniciar sesión</a> |
+            <a href="registro.html">Registrar usuario</a>
+            <a href="carrito.html" class="cart-btn" id="cart-counter">🛒 Cart (0)</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="featured-products">
+            <h3>Nuestro Catálogo</h3>
+
+            <div class="filters-container">
+                <input type="text" id="input-search" class="filter-input"
+                    placeholder="Buscar por nombre de producto...">
+
+                <select id="select-order" class="filter-select">
+                    <option value="default">Ordenar por precio</option>
+                    <option value="price-asc">Menor a Mayor</option>
+                    <option value="price-desc">Mayor a Menor</option>
+                </select>
+            </div>
+
+            <div class="product-grid">
+                <article class="product-card">
+                    <img src="../images/catan.jpg" alt="Catan, un juego de mesa" class="product-img">
+                    <h4>Catan Base</h4>
+                    <p class="category">Juegos de Mesa</p>
+                    <p class="product-desc">
+                        Un clásico juego de estrategia donde los jugadores compiten por colonizar
+                        y expandirse en la isla de Catan. Ideal para 3-4 jugadores.
+                    </p>
+                    <p class="price">$29.990</p>
+                    <button class="btn-secondary btn-add-cart" data-id="1" data-nombre="Catan Base"
+                        data-precio="29990">Añadir al carrito</button>
+                </article>
+
+                <article class="product-card">
+                    <img src="../images/secretlab-titan.jpg" alt="Silla gamer secretlab titan" class="product-img">
+                    <h4>Silla Secretlab Titan</h4>
+                    <p class="category">Sillas Gamers</p>
+                    <p class="product-desc">
+                        Diseñada para el máximo confort, esta silla ofrece soporte ergonómico
+                        y personalización ajustable para sesiones de juego prolongadas.
+                    </p>
+                    <p class="price">$349.990</p>
+                    <button class="btn-secondary btn-add-cart" data-id="2" data-nombre="Silla Secretlab Titan"
+                        data-precio="349990">Añadir al carrito</button>
+                </article>
+
+                <article class="product-card">
+                    <img src="../images/playstation5.jpg" alt="Consola Playstation5" class="product-img">
+                    <h4>PlayStation 5 Digital Version</h4>
+                    <p class="category">Consolas</p>
+                    <p class="product-desc">
+                        La consola de última generación de Sony, que ofrece gráficos impresionantes y tiempos
+                        de carga ultrarrápidos para una experiencia de juego inmersiva.
+                    </p>
+                    <p class="price">$549.990</p>
+                    <button class="btn-secondary btn-add-cart" data-id="3" data-nombre="PlayStation 5 Digital Version"
+                        data-precio="549990">Añadir al carrito</button>
+                </article>
+
+                <article class="product-card">
+                    <img src="../images/logitech-g502.jpg" alt="Mouse gamer logitech-g502" class="product-img">
+                    <h4>Logitech G502 HERO</h4>
+                    <p class="category">Pc</p>
+                    <p class="product-desc">
+                        Con sensor de alta precisión y botones personalizables, este mouse es ideal
+                        para gamers que buscan control preciso y personalización.
+                    </p>
+                    <p class="price">$49.990</p>
+                    <button class="btn-secondary btn-add-cart" data-id="4" data-nombre="Logitech G502 HERO"
+                        data-precio="49990">Añadir al carrito</button>
+                </article>
+
+                <article class="product-card">
+                    <img src="../images/hyperx-cloud2.jpg" alt="Audifonos gamer hyperx cloud2" class="product-img">
+                    <h4>HyperX Cloud II</h4>
+                    <p class="category">Audifonos</p>
+                    <p class="product-desc">
+                        Proporcionan un sonido envolvente de calidad con un micrófono desmontable y almohadillas
+                        de espuma viscoelástica para mayor comodidad durante largas sesiones de juego.
+                    </p>
+                    <p class="price">$79.990</p>
+                    <button class="btn-secondary btn-add-cart" data-id="5" data-nombre="HyperX Cloud II"
+                        data-precio="79990">Añadir al carrito</button>
+                </article>
+
+                <article class="product-card">
+                    <img src="../images/carcassonne.jpg" alt="Carcassonne, un juego de mesa" class="product-img">
+                    <h4>Carcassonne</h4>
+                    <p class="category">Juegos de Mesa</p>
+                    <p class="product-desc">
+                        Juego de colocación de fichas donde los jugadores construyen el paisaje
+                        alrededor de una fortaleza medieval. Ideal para 2-5 jugadores.
+                    </p>
+                    <p class="price">$24.990</p>
+                    <button class="btn-secondary btn-add-cart" data-id="6" data-nombre="Carcassonne"
+                        data-precio="24990">Añadir al carrito</button>
+                </article>
+
+                <article class="product-card">
+                    <img src="../images/xbox-control.jpg" alt="control de Xbox" class="product-img">
+                    <h4>Control Xbox Series</h4>
+                    <p class="category">Consolas</p>
+                    <p class="product-desc">
+                        Ofrece una experiencia de juego cómoda con botones mapeables y una respuesta
+                        táctil mejorada. Compatible con consolas Xbox y PC.
+                    </p>
+                    <p class="price">$59.990</p>
+                    <button class="btn-secondary btn-add-cart" data-id="7" data-nombre="Control Xbox Series"
+                        data-precio="59990">Añadir al carrito</button>
+                </article>
+
+                <article class="product-card">
+                    <img src="../images/mousepad-razer.jpg" alt="Mousepad marca Razer" class="product-img">
+                    <h4>Mousepad Razer Goliathus</h4>
+                    <p class="category">Pc</p>
+                    <p class="product-desc">
+                        Ofrece un área de juego amplia con iluminación RGB personalizable,
+                        asegurando una superficie suave y uniforme para el movimiento del mouse.
+                    </p>
+                    <p class="price">$29.900</p>
+                    <button class="btn-secondary btn-add-cart" data-id="8" data-nombre="Mousepad Razer Goliathus"
+                        data-precio="29900">Añadir al carrito</button>
+                </article>
+
+                <article class="product-card">
+                    <img src="../images/servicio-tecnico.jpg" alt="Mantenciones de pc" class="product-img">
+                    <h4>Servicio Tecnico</h4>
+                    <p class="category">Servicios</p>
+                    <p class="product-desc">
+                        Servicio de limpieza interna, cambio de pasta térmica y revisión
+                        general de tu equipo gamer, realizado por técnicos especializados.
+                    </p>
+                    <p class="price">$19.990</p>
+                    <button class="btn-secondary btn-add-cart" data-id="9" data-nombre="Servicio Tecnico"
+                        data-precio="19990">Añadir al carrito</button>
+                </article>
+
+                <article class="product-card">
+                    <img src="../images/pc-asus-rog.jpg" alt="Computador gamer marca Asus" class="product-img">
+                    <h4>PC Gamer ASUS ROG Strix</h4>
+                    <p class="category">Pc</p>
+                    <p class="product-desc">
+                        Un potente equipo diseñado para los gamers más exigentes, equipado con componentes
+                        de alto rendimiento para ofrecer una experiencia excepcional en cualquier juego.
+                    </p>
+                    <p class="price">$1.299.990</p>
+                    <button class="btn-secondary btn-add-cart" data-id="10" data-nombre="PC Gamer ASUS ROG Strix"
+                        data-precio="1299900">Añadir al carrito</button>
+                </article>
+
+                <article class="product-card">
+                    <img src="../images/polera-levelup.jpg" alt="Polera con logo LEVEL UP" class="product-img">
+                    <h4>Polera personalizada LEVEL-UP</h4>
+                    <p class="category">Ropa</p>
+                    <p class="product-desc">
+                        Una camiseta cómoda y estilizada, con la posibilidad de personalizarla
+                        con tu gamer tag o diseño favorito.
+                    </p>
+                    <p class="price">$14.990</p>
+                    <button class="btn-secondary btn-add-cart" data-id="11" data-nombre="Polera personalizada LEVEL-UP"
+                        data-precio="14990">Añadir al carrito</button>
+                </article>
+
+                <article class="product-card">
+                    <img src="../images/poleron-levelup.jpg" alt="Poleron con logo LEVEL UP" class="product-img">
+                    <h4>Poleron personalizado LEVEL-UP</h4>
+                    <p class="category">Ropa</p>
+                    <p class="product-desc">
+                        Polerón abrigado y cómodo, ideal para sesiones de juego largas.
+                        Personalízalo con tu gamer tag o el diseño de tu equipo favorito.
+                    </p>
+                    <p class="price">$24.990</p>
+                    <button class="btn-secondary btn-add-cart" data-id="12" data-nombre="Poleron personalizado LEVEL-UP"
+                        data-precio="24990">Añadir al carrito</button>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div id="indicadores-container" style="margin-bottom: 10px; font-size: 0.9rem; color: var(--accent-green);">
+            Obteniendo valores del mercado...
+        </div>
+        <p>© 2026 Level-Up Gamer. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="../js/api.js"></script>
+    <script src="../js/carrito.js"></script>
+    <script src="../js/filtros.js"></script>
+</body>
+
+</html>

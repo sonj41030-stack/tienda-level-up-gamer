@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Level-Up Gamer | Iniciar Sesión</title>
+    
+    <link rel="icon" type="image/png" href="../images/favicon.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h1>LEVEL-UP <span>GAMER</span></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="blogs.html">Blogs</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="user-actions">
+            <a href="login.html" class="active">Iniciar sesión</a> | 
+            <a href="registro.html">Registrar usuario</a>
+            <a href="carrito.html" class="cart-btn" id="cart-counter">🛒 Cart (0)</a>
+        </div>
+    </header>
+
+    <main class="form-container" style="max-width: 400px; margin-top: 80px; margin-bottom: 80px;">
+        <h2>Iniciar Sesión</h2>
+        <form id="loginForm" novalidate>
+            <div class="form-group">
+                <label for="loginCorreo">Correo Electrónico:</label>
+                <input type="email" id="loginCorreo" name="correo" autocomplete="email" placeholder="usuario@duoc.cl">
+                <small class="error-msg" id="errorLoginCorreo"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="loginPassword">Contraseña:</label>
+                <input type="password" id="loginPassword" name="password" autocomplete="current-password" placeholder="••••••••">
+                <small class="error-msg" id="errorLoginPassword"></small>
+            </div>
+
+            <button type="submit" class="btn-primary btn-block">Ingresar</button>
+            
+            <div style="text-align: center; margin-top: 15px;">
+                <p style="color: var(--text-secondary); font-size: 0.9rem;">
+                    ¿No tienes cuenta? <a href="registro.html" style="color: var(--accent-blue);">Regístrate aquí</a>
+                </p>
+            </div>
+        </form>
+    </main>
+
+    <footer>
+        <div id="indicadores-container" style="margin-bottom: 10px; font-size: 0.9rem; color: var(--accent-green);">
+            Obteniendo valores del mercado...
+        </div>
+        <p>© 2026 Level-Up Gamer. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="../js/api.js"></script>
+    <script src="../js/login.js"></script>
+    <script src="../js/carrito.js"></script>
+</body>
+</html>

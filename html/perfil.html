@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Level-Up Gamer | Mi Perfil</title>
+    
+    <link rel="icon" type="image/png" href="../images/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h1>LEVEL-UP <span>GAMER</span></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="blogs.html">Blogs</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="user-actions">
+            <a href="login.html">Iniciar sesión</a> | 
+            <a href="registro.html">Registrar usuario</a>
+            <a href="carrito.html" class="cart-btn" id="cart-counter">🛒 Cart (0)</a>
+        </div>
+    </header>
+
+    <main class="profile-container" style="max-width: 800px; margin: 40px auto; padding: 0 20px;">
+        <div class="blogs-header" style="text-align: center; margin-bottom: 30px;">
+            <h2>Mi Perfil <span>LevelUp</span></h2>
+        </div>
+
+        <div class="profile-card" style="background: #181818; border: 1px solid #00ffcc; border-radius: 10px; padding: 30px; color: #fff;">
+            <div style="border-bottom: 1px solid #333; padding-bottom: 20px; margin-bottom: 20px;">
+                <h2 id="user-name" style="font-family: 'Orbitron', sans-serif; color: #00ffcc; margin-bottom: 5px;">Cargando...</h2>
+                <p id="user-email" style="color: #aaa;"></p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-bottom: 30px;">
+                <div style="background: #222; padding: 15px; border-radius: 8px; text-align: center;">
+                    <span style="font-size: 0.9rem; color: #888;">Nivel Actual</span>
+                    <h3 id="user-level" style="font-family: 'Orbitron', sans-serif; color: #fff; margin-top: 5px;">-</h3>
+                </div>
+                <div style="background: #222; padding: 15px; border-radius: 8px; text-align: center;">
+                    <span style="font-size: 0.9rem; color: #888;">Puntos Acumulados</span>
+                    <h3 id="user-points" style="font-family: 'Orbitron', sans-serif; color: #00ffc8; margin-top: 5px;">0 Pts</h3>
+                </div>
+            </div>
+
+            <div style="background: #111; padding: 20px; border-radius: 8px; border: 1px dashed #444; margin-bottom: 30px; text-align: center;">
+                <h4 style="font-family: 'Orbitron', sans-serif; margin-bottom: 10px;">Tu Código de Referido</h4>
+                <p style="font-size: 0.9rem; color: #ccc; margin-bottom: 10px;">Comparte este código con tus amigos para ganar 500 puntos por cada registro.</p>
+                <div id="user-ref-code" style="font-size: 1.6rem; font-family: 'Orbitron', sans-serif; color: #00ffcc; letter-spacing: 2px;">-</div>
+            </div>
+
+            <div style="text-align: center;">
+                <h4 style="font-family: 'Orbitron', sans-serif; margin-bottom: 10px;">Canjear Puntos</h4>
+                <p style="font-size: 0.9rem; color: #ccc; margin-bottom: 15px;">Canjea 500 puntos por $5.000 CLP de descuento directo.</p>
+                <button id="btn-redeem" class="btn-secondary" style="padding: 10px 25px; cursor: pointer;">Canjear 500 Puntos</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div id="indicadores-container" style="margin-bottom: 10px; font-size: 0.9rem; color: var(--accent-green);">
+            Obteniendo valores del mercado...
+        </div>
+        <p>© 2026 Level-Up Gamer. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="../js/api.js"></script>
+    <script src="../js/carrito.js"></script>
+    <script src="../js/levelUpSystem.js"></script>
+    <script src="../js/perfil.js"></script>
+</body>
+</html>
