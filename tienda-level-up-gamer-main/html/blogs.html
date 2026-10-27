@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Level-Up Gamer | Blogs</title>
+    
+    <link rel="icon" type="image/png" href="../images/favicon.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>LEVEL-UP <span>GAMER</span></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="blogs.html" class="active">Blogs</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="user-actions">
+            <a href="login.html">Iniciar sesión</a> | 
+            <a href="registro.html">Registrar usuario</a>
+            <a href="carrito.html" class="cart-btn" id="cart-counter">🛒 Cart (0)</a>
+        </div>
+    </header>
+
+    <main class="blogs-container">
+        <div class="blogs-header">
+            <h2>Novedades y <span>Noticias</span></h2>
+            <p>Mantente al día con las últimas reseñas, parches y lanzamientos del mundo gamer y los juegos de mesa.</p>
+        </div>
+
+        <div class="blog-grid" id="blog-grid"></div>
+    </main>
+
+    <div id="blog-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" id="close-modal">&times;</span>
+            <span id="modal-fecha" class="modal-date"></span>
+            <h2 id="modal-titulo"></h2>
+            <p id="modal-cuerpo"></p>
+        </div>
+    </div>
+
+    <footer>
+        <div id="indicadores-container" style="margin-bottom: 10px; font-size: 0.9rem; color: var(--accent-green);">
+            Obteniendo valores del mercado...
+        </div>
+        <p>© 2026 Level-Up Gamer. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="../js/api.js"></script>
+    <script src="../js/carrito.js"></script>
+    <script src="../js/blogs.js"></script>
+</body>
+</html>

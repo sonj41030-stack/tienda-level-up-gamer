@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Level-Up Gamer | Carrito de Compras</title>
+    
+    <link rel="icon" type="image/png" href="../images/favicon.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h1>LEVEL-UP <span>GAMER</span></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="blogs.html">Blogs</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="user-actions">
+            <a href="login.html">Iniciar sesión</a> | 
+            <a href="registro.html">Registrar usuario</a>
+            <a href="carrito.html" class="cart-btn active">🛒 Cart (0)</a>
+        </div>
+    </header>
+
+    <main class="form-container" style="max-width: 800px;">
+        <h2>Tu Carrito de Compras</h2>
+        
+        <table id="cart-table" style="width: 100%; text-align: left; margin-top: 20px; border-collapse: collapse;">
+            <thead>
+                <tr style="border-bottom: 1px solid var(--accent-green);">
+                    <th>Producto</th>
+                    <th>Precio</th>
+                    <th>Cantidad</th>
+                    <th>Subtotal</th>
+                </tr>
+            </thead>
+            <tbody id="cart-body">
+            </tbody>
+        </table>
+
+        <div style="text-align: right; margin-top: 20px;">
+            <h3>Total: <span id="cart-total" style="color: var(--accent-green);">$0</span></h3>
+            <button id="btn-vaciar" class="btn-secondary" style="margin-top: 10px;">Vaciar Carrito</button>
+            <button id="btn-pagar" class="btn-primary" style="margin-top: 10px;">Pagar Ahora</button>
+        </div>
+    </main>
+
+    <footer>
+        <div id="indicadores-container" style="margin-bottom: 10px; font-size: 0.9rem; color: var(--accent-green);">
+            Obteniendo valores del mercado...
+        </div>
+        <p>© 2026 Level-Up Gamer. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="../js/api.js"></script>
+    <script src="../js/carrito.js"></script>
+</body>
+</html>

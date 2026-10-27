@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Level-Up Gamer | Inicio</title>
+
+    <link rel="icon" type="image/png" href="images/favicon.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>LEVEL-UP <span>GAMER</span></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="html/productos.html">Productos</a></li>
+                <li><a href="html/nosotros.html">Nosotros</a></li>
+                <li><a href="html/blogs.html">Blogs</a></li>
+                <li><a href="html/contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="user-actions">
+            <a href="html/login.html">Iniciar sesión</a> |
+            <a href="html/registro.html">Registrar usuario</a>
+            <a href="html/carrito.html" class="cart-btn">🛒 Cart (0)</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h2>¡Desafía tus límites con Level-Up Gamer!</h2>
+                <p>Conviértete en el héroe de tu propia historia y únete a nuestra comunidad de jugadores. ¡Explora, juega y gana con nosotros!</p>
+                <a href="html/productos.html" class="btn-primary">Ver productos</a>
+            </div>
+            <div class="hero-image">
+                <img src="images/tienda.jpg" alt="Banner Level-Up Gamer" style="width: 100%; height: auto; border-radius: 8px;">
+            </div>
+        </section>
+
+        <section class="featured-products">
+            <h3>Productos Destacados</h3>
+            <div class="product-grid">
+                <article class="product-card">
+                    <img src="images/catan.jpg" alt="Catan, un juego de mesa" class="product-img">
+                    <h4>Catan</h4>
+                    <p class="category">Juegos de Mesa</p>
+                    <p class="price">$29.990 CLP</p>
+                    <button class="btn-secondary">Añadir al carrito</button>
+                </article>
+                <article class="product-card">
+                    <img src="images/secretlab-titan.jpg" alt="Silla gamer secretlab titan" class="product-img">
+                    <h4>Silla Gamer Secretlab Titan</h4>
+                    <p class="category">Sillas Gamers</p>
+                    <p class="price">$349.990 CLP</p>
+                    <button class="btn-secondary">Añadir al carrito</button>
+                </article>
+                <article class="product-card">
+                    <img src="images/playstation5.jpg" alt="Consola Playstation5" class="product-img">
+                    <h4>PlayStation 5</h4>
+                    <p class="category">Consolas</p>
+                    <p class="price">$549.990 CLP</p>
+                    <button class="btn-secondary">Añadir al carrito</button>
+                </article>
+                <article class="product-card">
+                    <img src="images/logitech-g502.jpg" alt="Mouse gamer logitech-g502" class="product-img">
+                    <h4>Logitech G502 HERO</h4>
+                    <p class="category">Mouse</p>
+                    <p class="price">$49.990 CLP</p>
+                    <button class="btn-secondary">Añadir al carrito</button>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#">Categoría Juegos</a> |
+                <a href="#">Categoría Consolas</a> |
+                <a href="#">Categoría Accesorios</a>
+            </div>
+            <div class="newsletter">
+                <p>Mantente en contacto:</p>
+                <input type="email" placeholder="Ingresa tu email">
+                <button class="btn-primary">Suscribirse</button>
+            </div>
+            <div id="indicadores-container" style="margin-bottom: 10px; font-size: 0.9rem; color: var(--accent-green);">
+                Obteniendo valores del mercado...
+            </div>
+            <p>© 2026 Level-Up Gamer. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/api.js"></script>
+    <script src="js/carrito.js"></script>
+    <script src="js/suscripciones.js"></script>
+
+</body>
+
+</html>
